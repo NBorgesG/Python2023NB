@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Usuarios
+{% endblock %}
+
+{% block comentario%} Rellena el formulario para agregar un Usuario! {% endblock %}
+
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{formUser.as_table}}
+        </table>
+        <input type="submit" value="Guardar Datos">
+        
+    </form>
+{% endblock %}

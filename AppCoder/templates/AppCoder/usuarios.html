@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Usuarios Registrados
+{% endblock %}
+
+{% block subtitulo %}
+    Todo lo que buscas esta aca!
+{% endblock%}
+
+{% block comentario%} Rellena el formulario para agregar un usuario! {% endblock %}
+
+{% block formulario %}
+    <a type="button" class="btn btn-outline-info" href="{% url 'userForm' %}">Click aqui para agregar un usuario</a>
+{% endblock %}

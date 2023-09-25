@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    MakeUp and tools by Nancy Borges
+{% endblock %}
+
+{% block subtitulo %}
+    Todo lo que buscas esta aca!
+{% endblock%}
+
+{% block comentario%} Nos encanta como te ves! {% endblock %}
+
+{%block busqueda %}
+
+<form action="/AppCoder/resultadosBusqueda/" method="GET">
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+</form>
+    
+<p>Estamos buscando el nombre de maquillaje: {{nombre}}</p>
+
+{% for maquillaje in listaMaquillajes%}
+    <p>Nombre: {{maquillaje.nombre}} ---- Color: {{maquillaje.color}} ---- Precio: {{maquillaje.precio}}</p>
+
+{% endfor%}
+
+{% endblock %}
+

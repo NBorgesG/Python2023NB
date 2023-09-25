@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Accesorios
+{% endblock %}
+
+{% block subtitulo %}
+    Todo lo que buscas esta aca!
+{% endblock%}
+
+{% block comentario%} Rellena el formulario para agregar un producto! {% endblock %}
+
+{% block formulario %}
+    <a type="button" class="btn btn-outline-info" href="{% url 'accForm' %}">Click aqui para agregar un producto</a>
+{% endblock %}
